@@ -1,0 +1,16 @@
+<h1>Lista de Posts:</h1>
+<p>
+    <a href="/cad">CADASTRAR POSTAGENS</a>
+</p>
+{{#each posts}}
+    {{#dataValues}} <!- para pegar os valores dos campos do DB ->
+        <small>{{createdAt}}</small>
+        <h2>{{titulo}}</h2>
+        <p>{{conteudo}}</p>
+        <button>Editar</button>
+        <a href="/deletar/{{id}}">
+            <button>Deletar</button>
+        </a>
+        <hr>
+    {{/dataValues}}
+{{/each}}
